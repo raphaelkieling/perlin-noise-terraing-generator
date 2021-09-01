@@ -1,0 +1,17 @@
+{
+  "name": "lowlife",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas-sketch": "^0.7.4",
+    "perlin-noise-3d": "^0.5.4",
+    "three": "^0.132.2"
+  }
+}
