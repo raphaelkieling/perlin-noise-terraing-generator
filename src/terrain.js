@@ -14,7 +14,7 @@ class Terrain {
     this.baseColor = baseColor;
 
     // Setup a geometry
-    this.geometry = new THREE.PlaneGeometry(200, 200, 30, 30);
+    this.geometry = new THREE.PlaneGeometry(400, 400, 50, 50);
     this.setupColor();
 
     this.loader = new THREE.TextureLoader();
@@ -29,6 +29,7 @@ class Terrain {
       vertexColors: true,
       wireframe: false,
       flatShading: true,
+      side: THREE.DoubleSide
     });
 
     this.mesh = new THREE.Mesh(this.geometry, this.material);

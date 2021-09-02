@@ -24,24 +24,25 @@ const sketch = ({ context }) => {
 
   // Setup a camera
   const camera = new THREE.PerspectiveCamera(50, 1, 0.01, 1000);
-  camera.position.set(0, 0, 250);
+  camera.position.set(0, 0, 350);
   camera.lookAt(new THREE.Vector3());
 
   // Setup camera controller
   const controls = new THREE.OrbitControls(camera, context.canvas);
 
   const light = new THREE.SpotLight("white", 1);
-  light.position.set(0, 0, 100);
+  light.position.set(0, 0, 300);
 
   // Setup your scene
   const scene = new THREE.Scene();
-  const terrain = new Terrain({ baseColor: 0x27ae60, animated: true, flying: 0.05 });
+  const terrain = new Terrain({ baseColor: 0x27ae60, amplitude: 20 });
   const water = new Terrain({
-    amplitude: 8,
+    amplitude: 5,
     animated: true,
     baseColor: 0x2980b9,
-    flying: 0.001
+    flying: 0.005,
   });
+  water.mesh.position.set(0,0, -5)
 
   scene.add(water.setup());
   scene.add(terrain.setup());
